@@ -1,0 +1,42 @@
+Parameters:
+  Prefix:
+    Type: String
+
+Resources:
+  S3LoggingBucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      AccessControl: Private
+
+  S3Bucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      # Access S3 content only through CF, using Origin Access Identity
+      AccessControl: Private
+      AccelerateConfiguration:
+        AccelerationStatus: Suspended
+      # Had no need for storage analytics at this stage, not enough data.
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          ServerSideEncryptionByDefault:
+            # No need to specify our own KMS keys, let AWS handle it.
+            SSEAlgorithm: aws:kms
+      # Don't specify bucket name, let AWS handle naming conventions via CF.
+      # Had no need for InventoryConfiguration either, too advanced for now.
+      # Do not require LifecycleConfig, this is not a DR/Backup bucket
+      LoggingConfiguration:
+        DestinationBucketName: !Ref S3LoggingBucket
+        LogFilePrefix: !Ref Prefix 
+      MetricsConfigurations:
+        Id: String
+        Prefix: String
+        TagFilters:
+          - Key:
+            Value:
+      # I have no need for any sort of queue or lambda notif as not data bucket
+      # Don't see any purpose in resource tags either, not enough content
+      VersioningConfiguration:
+        Status: Enabled
+      WebsiteConfiguration:
+        ErrorDocument: error.html
+        IndexDocument: index.html
