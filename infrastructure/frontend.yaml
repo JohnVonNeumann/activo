@@ -40,3 +40,6 @@ Resources:
       WebsiteConfiguration:
         ErrorDocument: error.html
         IndexDocument: index.html
+
+  CloudfrontDistribution:
+
