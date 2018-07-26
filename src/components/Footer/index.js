@@ -10,7 +10,7 @@ const Footer = () => {
       <div className='container'>
         <div className='content has-text-centered'>
           <p>
-            {config.copyright}
+            {config.siteTitle}. {config.copyright}
           </p>
         </div>
       </div>
