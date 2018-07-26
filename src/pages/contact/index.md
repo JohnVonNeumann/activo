@@ -13,6 +13,8 @@ contacts:
       dignissim ligula.  Lorem ipsum dolor sit amet, consectetur adipiscing
       elit.
     email: contact@lorem.com
+  - description: Contact for sales.
+    email: sales@activo.com.au
 meta_title: Contact Us | Gatsby Starter Business
 meta_description: >-
   Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
