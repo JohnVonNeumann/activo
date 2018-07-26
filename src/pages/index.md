@@ -35,11 +35,11 @@ testimonials:
       Fusce porttitor vulputate enim, nec blandit magna gravida et. Etiam et
       dignissim ligula.  Lorem ipsum dolor sit amet, consectetur adipiscing
       elit.
-meta_title: Home | Gatsby Starter Business
+meta_title: Home | Activo Maintenance Products
 meta_description: >-
-  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-  ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-  venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
-  consectetur purus sit amet fermentum.
+  Architectural Expansion Joints and new Trafficable Waterproof Expansion
+  Joints, Activo Maintenance Products supplies and installs a complete range of
+  expansion joints, from light duty pedestrian rated movement joints through to
+  heavy duty expansion joints.
 ---
 
