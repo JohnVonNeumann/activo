@@ -7,6 +7,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import PostCard from '../../components/PostCard'
 
+import config from '../../../meta/config.js'
+
 export default class BlogPage extends Component {
   render () {
     const {data} = this.props
@@ -15,7 +17,7 @@ export default class BlogPage extends Component {
     return (
       <div>
         <Helmet>
-          <title>Blog | Gatsby Starter Business</title>
+          <title>Blog | {config.siteTitle} </title>
         </Helmet>
         <section className='hero is-primary is-bold'>
           <div className='hero-body'>
